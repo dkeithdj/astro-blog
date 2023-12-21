@@ -5,7 +5,7 @@ import Main from "../../components/Main.astro";
 import H1 from "../../components/H1.astro";
 
 const { slug } = Astro.params;
-const blog = await getEntryBySlug("blogs", slug);
+const blog = await getEntryBySlug("blogs", slug as string);
 
 if (!blog) {
   return Astro.redirect("/404");
