@@ -3,7 +3,7 @@ author: arron-bur
 categories: ["astrology"]
 date: 12/01/2023
 featured: false
-image: /public/jwst.png
+image: ./images/jwst.png
 title: Astrology, the ancient art
 ---
 

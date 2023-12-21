@@ -3,7 +3,7 @@ author: steven-he
 categories: ["computers"]
 date: 12/05/2023
 featured: true
-image: /public/computers.jpg
+image: ./images/computers.jpg
 title: Computer Science, a dynamic field
 ---
 
