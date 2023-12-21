@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import H1 from "../components/H1.astro";
+import Main from "../components/Main.astro";
+import { getCollection } from "astro:content";
+import FeaturedBlog from "../components/FeaturedBlog.astro";
+const blogs = await getCollection("blogs");
+console.log(blogs.map((blog) => blog.data.title));
+---
+
+<Layout title="Hello world">
+  <Main>
+    <H1 text="This is my blog" />
+    <p class="pb-4 text-justify">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat possimus
+      quae nisi! Perferendis earum velit possimus, non est quos, laborum facere
+      recusandae delectus veniam itaque! Ducimus obcaecati esse eaque beatae!
+    </p>
+    <H1 text="Featured" />
+    <FeaturedBlog />
+  </Main>
+</Layout>

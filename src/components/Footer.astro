@@ -1,0 +1,19 @@
+---
+import Link from "./Link.astro";
+---
+
+<footer
+  class="grid grid-cols-2 gap-y-4 sm:flex sm:justify-between px-24 max-sm:px-5 max-w-7xl mx-auto w-full py-8"
+>
+  <div class="flex sm:block">
+    <img src="/icon_128x128.png" alt="icon" width={100} height={100} class="" />
+  </div>
+  <div>
+    <div class="font-bold pb-1"><h3>Contacts</h3></div>
+    <div>
+      <div><Link link="/" text="Facebook" /></div>
+      <div><Link link="/" text="Instagram" /></div>
+      <div><Link link="/" text="LinkedIn" /></div>
+    </div>
+  </div>
+</footer>

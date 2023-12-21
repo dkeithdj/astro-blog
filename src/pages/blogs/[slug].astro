@@ -1,0 +1,31 @@
+---
+import { getCollection, CollectionEntry, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Main from "../../components/Main.astro";
+import H1 from "../../components/H1.astro";
+
+const { slug } = Astro.params;
+const blog = await getEntryBySlug("blogs", slug);
+
+if (!blog) {
+  return Astro.redirect("/404");
+}
+
+const { Content } = await blog.render();
+---
+
+<Layout title={blog.data.title}>
+  <Main>
+    <H1 text={blog.data.title} />
+    <img
+      src={blog.data.image}
+      alt={blog.data.title}
+      width={600}
+      height={600 / 1.5}
+      class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
+    />
+    <div class="prose max-w-max">
+      <Content />
+    </div>
+  </Main>
+</Layout>

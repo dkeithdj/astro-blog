@@ -1,0 +1,7 @@
+---
+import { getCollection } from "astro:content";
+import Blog from "./Blog.astro";
+const blogs = await getCollection("blogs");
+---
+
+{blogs.filter((blog) => blog.data.featured).map((blog) => <Blog blog={blog} />)}
